@@ -19,8 +19,14 @@ from MySite import views as siteviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',siteviews.index),
+    #path('',siteviews.index),
+    path('',siteviews.index1),
     path('news_list/<str:news_type>',siteviews.news_list),
     path('trans/',siteviews.translate),
     path('trans/<str:from_lang>/<str:to_lang>/<str:words>',siteviews.translate2),
+    path('filter/', siteviews.filter_test),
+    path('all/',siteviews.searchAll),
+    path('search_name/',siteviews.searchname),
+    path('search_price/', siteviews.searchprice),
+    path('search_sort/', siteviews.searchsort),
 ]
